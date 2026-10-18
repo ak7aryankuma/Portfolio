@@ -1,4 +1,4 @@
-# Aryan Kumar — Premium Editorial Portfolio
+# Aryan Kumar — Portfolio
 
 A high-performance personal portfolio built for **Aryan Kumar** (AI Engineer & AI Automation Specialist), inspired by the minimalist, media-led design aesthetic of [ASR Domain](https://world.asrdomain-5fb.workers.dev/).
 
