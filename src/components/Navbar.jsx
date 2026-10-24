@@ -15,11 +15,10 @@ export default function Navbar() {
 
   const navLinks = [
     { num: '01', label: 'Work', href: '#work' },
-    { num: '02', label: 'AI Business Analyst', href: '#analyst' },
-    { num: '03', label: 'About', href: '#about' },
-    { num: '04', label: 'Skills', href: '#skills' },
-    { num: '05', label: 'Credentials', href: '#certifications' },
-    { num: '06', label: 'Contact', href: '#contact' },
+    { num: '02', label: 'About', href: '#about' },
+    { num: '03', label: 'Skills', href: '#skills' },
+    { num: '04', label: 'Credentials', href: '#certifications' },
+    { num: '05', label: 'Contact', href: '#contact' },
   ];
 
   return (

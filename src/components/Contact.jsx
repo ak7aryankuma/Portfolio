@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="p-8 sm:p-14 md:p-16 rounded-3xl bg-zinc-950 border border-zinc-800/80 shadow-2xl relative overflow-hidden mb-20">
           <div className="max-w-3xl space-y-8 relative z-10">
             <div className="flex items-center gap-2 font-mono text-xs text-emerald-400 tracking-widest uppercase">
-              <span>06</span>
+              <span>05</span>
               <span className="text-zinc-600">//</span>
               <span>INITIATE CONTACT</span>
             </div>

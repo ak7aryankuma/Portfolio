@@ -56,7 +56,7 @@ export default function Skills() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 pb-8 border-b border-zinc-800">
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-emerald-400 mb-3 tracking-widest uppercase">
-              <span>04</span>
+              <span>03</span>
               <span className="text-zinc-600">//</span>
               <span>TECHNICAL COMPETENCY</span>
             </div>

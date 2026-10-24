@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SelectedWork from './components/SelectedWork';
-import BusinessAnalyst from './components/BusinessAnalyst';
 import About from './components/About';
 import Skills from './components/Skills';
 import Certificates from './components/Certificates';
@@ -39,7 +38,6 @@ export default function App() {
       <main>
         <Hero />
         <SelectedWork onOpenLightbox={handleOpenLightbox} />
-        <BusinessAnalyst onOpenLightbox={handleOpenLightbox} />
         <About onOpenLightbox={handleOpenLightbox} />
         <Skills />
         <Certificates onOpenLightbox={handleOpenLightbox} />

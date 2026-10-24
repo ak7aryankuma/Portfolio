@@ -15,7 +15,7 @@ export default function About({ onOpenLightbox }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 pb-8 border-b border-zinc-900">
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-emerald-400 mb-3 tracking-widest uppercase">
-              <span>03</span>
+              <span>02</span>
               <span className="text-zinc-600">//</span>
               <span>PROFILE & BACKGROUND</span>
             </div>

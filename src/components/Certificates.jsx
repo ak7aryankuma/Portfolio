@@ -95,7 +95,7 @@ export default function Certificates({ onOpenLightbox }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-6 pb-8 border-b border-zinc-900">
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-emerald-400 mb-3 tracking-widest uppercase">
-              <span>05</span>
+              <span>04</span>
               <span className="text-zinc-600">//</span>
               <span>ACCREDITATION</span>
             </div>

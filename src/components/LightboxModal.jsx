@@ -20,7 +20,7 @@ export default function LightboxModal({ isOpen, imageSrc, title, subtitle, onClo
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/90 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/90 backdrop-blur-md animate-fade-in"
       onClick={onClose}
     >
       <div 
