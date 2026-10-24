@@ -7,6 +7,29 @@ export default function SelectedWork({ onOpenLightbox }) {
   const projects = [
     {
       index: '01',
+      tag: 'AGENTIC WORKFLOWS // HUMAN-IN-THE-LOOP',
+      title: 'AI-Powered E-Commerce Support Automation',
+      subtitle: 'Intelligent Query Triage & Risk-Gated Human Review System',
+      status: 'Functional System',
+      statusColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
+      description: 'An AI-powered e-commerce support system that automates repetitive customer inquiries (order status, tracking, delivery delays) while identifying sensitive cases (refund requests, damaged items, customer complaints) that require human judgment. Combines deterministic order verification with local LLM reasoning to ensure customer responses remain strictly grounded in transactional facts.',
+      architecture: 'Orchestrated via n8n with local Gemma LLM inference (LM Studio) and a Python FastAPI backend service. Features a JavaScript defensive normalization node that validates the model\'s structured decision before routing sensitive tickets into an Excel-backed human review queue.',
+      highlights: [
+        'Automated order lookup & query investigation via FastAPI REST service',
+        'Gemma LLM grounded in real-time order records to draft accurate customer replies',
+        'Defensive JavaScript normalization node preventing ungrounded model output',
+        'Human-in-the-loop risk routing: routes refund requests and complaints to review branch',
+        'Maintains structured Excel review queue for supervisor audit and approval'
+      ],
+      techStack: ['n8n', 'Python', 'FastAPI', 'Gemma (Local LLM)', 'LM Studio', 'Excel Queue', 'Docker', 'Google Antigravity'],
+      videoSrc: '/assets/projects/project-04/demo-video.mp4',
+      coverSrc: '/assets/projects/project-04/cover.png',
+      pdfUrl: '/assets/projects/project-04/ecommerce-support-architecture.pdf',
+      githubUrl: null,
+      liveUrl: null,
+    },
+    {
+      index: '02',
       tag: 'FINANCIAL INTELLIGENCE // AGENTIC WORKFLOW',
       title: 'FinSight AI',
       subtitle: 'Financial & Business Performance Analyst Agent',
@@ -27,7 +50,7 @@ export default function SelectedWork({ onOpenLightbox }) {
       liveUrl: 'https://financialanalystagent-klgoappyzrpeq8z2vsz47ey.streamlit.app/',
     },
     {
-      index: '02',
+      index: '03',
       tag: 'DOCUMENT INTELLIGENCE // AUDIT AUTOMATION',
       title: 'AI Invoice Audit Agent',
       subtitle: 'Autonomous Document Processing & Risk Verification',
@@ -46,29 +69,6 @@ export default function SelectedWork({ onOpenLightbox }) {
       coverSrc: '/assets/projects/project-02/cover.jpg',
       githubUrl: 'https://github.com/ak7aryankuma/AI_INVOICE_AUDIT_AGENT',
       liveUrl: 'https://aiinvoiceauditagent.streamlit.app/',
-    },
-    {
-      index: '03',
-      tag: 'AGENTIC WORKFLOWS // HUMAN-IN-THE-LOOP',
-      title: 'AI-Powered E-Commerce Support Automation',
-      subtitle: 'Intelligent Query Triage & Risk-Gated Human Review System',
-      status: 'Functional System',
-      statusColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-      description: 'An AI-powered e-commerce support system that automates repetitive customer inquiries (order status, tracking, delivery delays) while identifying sensitive cases (refund requests, damaged items, customer complaints) that require human judgment. Combines deterministic order verification with local LLM reasoning to ensure customer responses remain strictly grounded in transactional facts.',
-      architecture: 'Orchestrated via n8n with local Gemma LLM inference (LM Studio) and a Python FastAPI backend service. Features a JavaScript defensive normalization node that validates the model\'s structured decision before routing sensitive tickets into an Excel-backed human review queue.',
-      highlights: [
-        'Automated order lookup & query investigation via FastAPI REST service',
-        'Gemma LLM grounded in real-time order records to draft accurate customer replies',
-        'Defensive JavaScript normalization node preventing ungrounded model output',
-        'Human-in-the-loop risk routing: routes refund requests and complaints to review branch',
-        'Maintains structured Excel review queue for supervisor audit and approval'
-      ],
-      techStack: ['n8n', 'Python', 'FastAPI', 'Gemma (Local LLM)', 'LM Studio', 'Excel Queue', 'Docker', 'Google Antigravity'],
-      videoSrc: '/assets/projects/project-04/demo-video.mp4',
-      coverSrc: null,
-      pdfUrl: '/assets/projects/project-04/ecommerce-support-architecture.pdf',
-      githubUrl: null,
-      liveUrl: null,
     },
     {
       index: '04',
