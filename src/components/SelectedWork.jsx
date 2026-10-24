@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoPlayer from './VideoPlayer';
-import { ExternalLink, Sparkles, CheckCircle2, ShieldCheck, Cpu, ArrowUpRight, Maximize2 } from 'lucide-react';
+import { ExternalLink, Sparkles, CheckCircle2, ShieldCheck, Cpu, ArrowUpRight, Maximize2, FileText } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function SelectedWork({ onOpenLightbox }) {
@@ -49,6 +49,29 @@ export default function SelectedWork({ onOpenLightbox }) {
     },
     {
       index: '03',
+      tag: 'AGENTIC WORKFLOWS // HUMAN-IN-THE-LOOP',
+      title: 'AI-Powered E-Commerce Support Automation',
+      subtitle: 'Intelligent Query Triage & Risk-Gated Human Review System',
+      status: 'Functional System',
+      statusColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
+      description: 'An AI-powered e-commerce support system that automates repetitive customer inquiries (order status, tracking, delivery delays) while identifying sensitive cases (refund requests, damaged items, customer complaints) that require human judgment. Combines deterministic order verification with local LLM reasoning to ensure customer responses remain strictly grounded in transactional facts.',
+      architecture: 'Orchestrated via n8n with local Gemma LLM inference (LM Studio) and a Python FastAPI backend service. Features a JavaScript defensive normalization node that validates the model\'s structured decision before routing sensitive tickets into an Excel-backed human review queue.',
+      highlights: [
+        'Automated order lookup & query investigation via FastAPI REST service',
+        'Gemma LLM grounded in real-time order records to draft accurate customer replies',
+        'Defensive JavaScript normalization node preventing ungrounded model output',
+        'Human-in-the-loop risk routing: routes refund requests and complaints to review branch',
+        'Maintains structured Excel review queue for supervisor audit and approval'
+      ],
+      techStack: ['n8n', 'Python', 'FastAPI', 'Gemma (Local LLM)', 'LM Studio', 'Excel Queue', 'Docker', 'Google Antigravity'],
+      videoSrc: '/assets/projects/project-04/demo-video.mp4',
+      coverSrc: null,
+      pdfUrl: '/assets/projects/project-04/ecommerce-support-architecture.pdf',
+      githubUrl: null,
+      liveUrl: null,
+    },
+    {
+      index: '04',
       tag: 'FULL-STACK // MULTI-LLM ASSISTED',
       title: 'FinZen AI',
       subtitle: 'AI-Powered Personal Finance & Budgeting Manager',
@@ -202,7 +225,7 @@ export default function SelectedWork({ onOpenLightbox }) {
                 </div>
 
                 {/* Action Links */}
-                <div className="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-900">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
@@ -212,6 +235,19 @@ export default function SelectedWork({ onOpenLightbox }) {
                     >
                       <span>Live Application</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+
+                  {project.pdfUrl && (
+                    <a
+                      href={project.pdfUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      download="ecommerce-support-architecture.pdf"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-sm"
+                    >
+                      <FileText className="w-3.5 h-3.5" />
+                      <span>Architecture Spec (PDF)</span>
                     </a>
                   )}
 
