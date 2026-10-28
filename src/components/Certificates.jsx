@@ -67,24 +67,40 @@ export default function Certificates({ onOpenLightbox }) {
 
   const digitalBadges = [
     {
-      title: 'Google Prompting Essentials',
-      issuer: 'Google | Coursera',
-      src: '/assets/certificates/badge-google-prompting-essentials.png'
+      title: 'Gen AI Agents: Transform Your Organization',
+      issuer: 'Google Cloud',
+      src: '/assets/certificates/badge-google-cloud-genai-agents.png',
+      url: 'https://www.skills.google/public_profiles/5315e2a6-71db-4e70-9d15-49937232bae5/badges/25274937',
     },
     {
-      title: 'Cisco Data Analytics',
-      issuer: 'Cisco Networking Academy',
-      src: '/assets/certificates/badge-cisco-data-analytics.png'
+      title: 'Gen AI Apps: Transform Your Work',
+      issuer: 'Google Cloud',
+      src: '/assets/certificates/badge-google-cloud-genai-apps.png',
+      url: 'https://www.skills.google/public_profiles/5315e2a6-71db-4e70-9d15-49937232bae5/badges/25274714',
+    },
+    {
+      title: 'Google Prompting Essentials',
+      issuer: 'Google | Coursera',
+      src: '/assets/certificates/badge-google-prompting-essentials.png',
+      url: 'https://coursera.org/verify/specialization/1CMWPATF3I4K',
     },
     {
       title: 'Google AI Essentials',
       issuer: 'Google | Coursera',
-      src: '/assets/certificates/badge-google-ai-essentials.png'
+      src: '/assets/certificates/badge-google-ai-essentials.png',
+      url: 'https://coursera.org/verify/specialization/U6BY5PD8N87L',
+    },
+    {
+      title: 'Cisco Data Analytics',
+      issuer: 'Cisco Networking Academy',
+      src: '/assets/certificates/badge-cisco-data-analytics.png',
+      url: null,
     },
     {
       title: 'AI in Accounting 101',
       issuer: 'Miles Education | CAIRA',
-      src: '/assets/certificates/badge-miles-caira-ai-in-accounting.png'
+      src: '/assets/certificates/badge-miles-caira-ai-in-accounting.png',
+      url: null,
     }
   ];
 
@@ -188,14 +204,14 @@ export default function Certificates({ onOpenLightbox }) {
             </h3>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
             {digitalBadges.map((badge, idx) => (
               <div
                 key={idx}
                 onClick={() => onOpenLightbox(badge.src, badge.title, badge.issuer)}
-                className="group cursor-pointer p-6 rounded-xl bg-zinc-950/60 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center text-center space-y-4"
+                className="group cursor-pointer p-4 sm:p-5 rounded-xl bg-zinc-950/60 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center text-center justify-between space-y-3"
               >
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
                   <img
                     src={badge.src}
                     alt={badge.title}
@@ -203,10 +219,23 @@ export default function Certificates({ onOpenLightbox }) {
                     loading="lazy"
                   />
                 </div>
-                <div>
-                  <h4 className="text-xs font-semibold text-zinc-200">{badge.title}</h4>
-                  <p className="text-[10px] font-mono text-zinc-500 mt-0.5">{badge.issuer}</p>
+                <div className="space-y-1 w-full">
+                  <h4 className="text-xs font-semibold text-zinc-200 line-clamp-2 leading-tight">{badge.title}</h4>
+                  <p className="text-[10px] font-mono text-zinc-500">{badge.issuer}</p>
                 </div>
+                {badge.url && (
+                  <a
+                    href={badge.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-400 hover:text-emerald-300 transition-colors pt-0.5"
+                    title={`Verify ${badge.title}`}
+                  >
+                    <span>Verify</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                )}
               </div>
             ))}
           </div>
