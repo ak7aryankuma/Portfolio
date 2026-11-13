@@ -8,6 +8,19 @@ export default function Hero() {
       {/* Subtle background ambient gradients */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
+      {/* Atmospheric 3D Anti-Gravity UI Visual Backdrop */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[55%] h-[85%] max-h-[640px] pointer-events-none overflow-hidden -z-10 opacity-30 lg:opacity-40 select-none">
+        <img
+          src="/assets/hero/anti-gravity-ui.jpg"
+          alt="Anti-Gravity UI Architecture"
+          className="w-full h-full object-cover object-center rounded-3xl"
+        />
+        {/* Soft edge fade masks to blend seamlessly into #09090b */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-[#09090b]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#09090b] via-transparent to-[#09090b]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl space-y-8">
           {/* Large Headline */}
