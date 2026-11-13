@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Database, BarChart2, ShieldAlert } from 'lucide-react';
+import { Bot, Database, BarChart2 } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
@@ -48,20 +48,6 @@ export default function Skills() {
         'Trend & Seasonality Analysis',
         'A/B Testing'
       ]
-    },
-    {
-      icon: ShieldAlert,
-      category: 'AUDIT, RISK & INTERNAL CONTROLS',
-      skills: [
-        'Statutory & Internal Audit',
-        'Risk Assessment',
-        'Internal Controls Design',
-        'Compliance & Governance',
-        'Account & Bank Reconciliation',
-        'Ledger Scrutiny',
-        'Journal Entry Verification',
-        'Trial Balance Review'
-      ]
     }
   ];
 
@@ -81,18 +67,21 @@ export default function Skills() {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-zinc-400 max-w-md font-normal leading-relaxed">
-            Verified technical capabilities spanning agentic orchestration, data pipelines, statistical modeling, and financial governance.
+            Verified technical capabilities spanning agentic orchestration, production data pipelines, and business intelligence.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {skillCategories.map((cat) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((cat, idx) => {
             const Icon = cat.icon;
+            const isSpan = idx === 2; // For tablet view where 2 cols exist, span full width; on lg it sits as 1 col
             return (
               <div
                 key={cat.category}
-                className="p-6 sm:p-8 rounded-2xl bg-zinc-950/80 border border-zinc-800/80 shadow-xl space-y-6 flex flex-col justify-between hover:border-zinc-700/80 transition-colors"
+                className={`p-6 sm:p-8 rounded-2xl bg-zinc-950/80 border border-zinc-800/80 shadow-xl space-y-6 flex flex-col justify-between hover:border-zinc-700/80 transition-colors ${
+                  isSpan ? 'md:col-span-2 lg:col-span-1' : ''
+                }`}
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-2.5 text-xs font-mono text-emerald-400">
